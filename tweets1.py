@@ -6,8 +6,8 @@ from tweepy import Stream
 #Variables that contains the user credentials to access Twitter API 
 access_token = "3094831522-tgA7HOeFZdKgMdmsjvgah7dg8nYBBZG4Tslw4nE"
 access_token_secret = "r7yQGb3zHjJzTsZBk5Jd6gHYMkwlLpQO7VMpjQCz8MR3c" 
-consumer_key = "y2WDtBoa8RN2tobXJ7vyE3Sq2"
-consumer_secret = "92tZvQlwfzCkRpR977qdRbdsW8jReIFoncH4YVsdy2CypQwjom"
+consumer_key = "JuIsPj0mn0ytDLjwgDC98uxja"
+consumer_secret = "K5t8KSLptWc3XRpTyP3Xn969uI4Ndfq1I3qtaclMesrtiOwp9q"
 
 
 #This is a basic listener that just prints received tweets to stdout.
@@ -28,6 +28,8 @@ if __name__ == '__main__':
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     stream = Stream(auth, l)
+    
+    print 5
 
     #This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
     stream.filter(track=['shared economy'])
